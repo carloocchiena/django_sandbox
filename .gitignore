@@ -130,4 +130,3 @@ dmypy.json
 
 # custom folder
 resources_to_be_deleted/
-test.py
