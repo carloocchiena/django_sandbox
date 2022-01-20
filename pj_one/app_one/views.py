@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, Http404
 
 # /app_one/
 
@@ -21,4 +21,4 @@ def service_view(request, service_name):
         service_name = services[service_name]
         return HttpResponse(f"Hello, world. You're at the {service_name} section.")
     except:
-        return HttpResponseNotFound("<h1>404 - Page not found</h1>")
+        raise Http404("<h1>404 - Page not found</h1>")
