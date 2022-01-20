@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 
 # /app_one/
 
@@ -17,4 +17,8 @@ def index(request):
     return HttpResponse("Hello, world. You're at the app_one index.")
 
 def service_view(request, service_name):
-    return HttpResponse(f"Hello, world. You're at the {services[service_name]} section.")
+    try: 
+        service_name = services[service_name]
+        return HttpResponse(f"Hello, world. You're at the {service_name} section.")
+    except:
+        return HttpResponseNotFound("<h1>404 - Page not found</h1>")
