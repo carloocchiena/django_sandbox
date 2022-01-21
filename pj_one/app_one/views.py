@@ -27,9 +27,10 @@ def service_view(request, service_name):
 
 # redirect function
 
-def redirect(request, service_num):
+def redirect_service(request, service_num):
     service_list = list(services.keys())
     service = service_list[service_num]
     webpage = reverse('service_view', args=[service])
                            
     return HttpResponseRedirect(webpage)
+
