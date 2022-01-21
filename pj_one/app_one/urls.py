@@ -3,6 +3,7 @@ from . import views
 
 # /app_one/
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<str:service_name>/', views.service_view, name='service_view')
+    path('', views.index),
+    path('<int:service_num>', views.redirect),
+    path('<str:service_name>/', views.service_view, name='service_view'),
 ]
