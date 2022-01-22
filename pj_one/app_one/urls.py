@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
 
-# /app_one/
 urlpatterns = [
-    path('', views.index),
-    path('<int:service_num>', views.redirect_service),
-    path('<str:service_name>/', views.service_view, name='service_view'),
+    path('',views.simple_view),
+    path('<int:num1>/<int:num2>',views.add_view),
+    path('<int:page_number>',views.page_num_view),
+    path('<str:topic>/',views.news_view,name='topic-page'),
 ]
