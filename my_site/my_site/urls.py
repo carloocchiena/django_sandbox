@@ -1,4 +1,4 @@
-"""pj_one URL Configuration
+"""my_site URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('app_one/', include('app_one.urls')),
-    path('admin/', admin.site.urls)
+    path('', views.index_view),
+    path('admin/', admin.site.urls),
+    path('first_app/',include('first_app.urls'))
 ]
