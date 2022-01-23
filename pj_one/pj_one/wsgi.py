@@ -1,5 +1,5 @@
 """
-WSGI config for my_site project.
+WSGI config for pj_one project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_site.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pj_one.settings')
 
 application = get_wsgi_application()

@@ -6,8 +6,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 # function views
-def simple_view(request):
-    return HttpResponse('SIMPLE VIEW!')
+def main_view(request):
+    return HttpResponse('<h1>Welcome to app main view<h1>')
     # return render(request,'first_app/example.html')
 
 
