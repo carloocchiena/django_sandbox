@@ -3,12 +3,12 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponse
 
-# Create your views here.
+# /first_app/
 
 # function views
 def main_view(request):
-    return HttpResponse('<h1>Welcome to app main view<h1>')
-    # return render(request,'first_app/example.html')
+    #return HttpResponse('<h1>Welcome to app main view<h1>')
+    return render(request,'first_app/home_app.html')
 
 
 articles = {
