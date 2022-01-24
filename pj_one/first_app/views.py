@@ -5,17 +5,26 @@ from django.http import HttpResponse
 
 # /first_app/
 
-# function views
-def main_view(request):
-    #return HttpResponse('<h1>Welcome to app main view<h1>')
-    return render(request,'first_app/home_app.html')
-
+# sections
 
 articles = {
     "sports":"Welcome to the sports page",
     "finance":"Finance news here",
     "politics":"Politics is in the news"
 }
+
+# function views
+
+# /
+def main_view(request):
+    return render(request,'first_app/home_app.html')
+
+# /variables/
+def variables_view(request):
+    
+    my_var = {'first_name':'John','last_name':'Doe', 'a_list':[1,2,3,4,5], 'a_dict':{'a':1,'b':2,'c':3}}
+    
+    return render(request,'first_app/variables.html', context=my_var)
 
 # redirects
 
