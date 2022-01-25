@@ -22,7 +22,7 @@ def main_view(request):
 # /variables/
 def variables_view(request):
     
-    my_var = {'first_name':'John','last_name':'Doe', 'a_list':[1,2,3,4,5], 'a_dict':{'a':1,'b':2,'c':3}}
+    my_var = {'first_name':'John','last_name':'Doe', 'a_list':["dog","cat","mouse"], 'a_dict':{'a':1,'b':2,'c':3}, 'user_auth':True}
     
     return render(request,'first_app/variables.html', context=my_var)
 

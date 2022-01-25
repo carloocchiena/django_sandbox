@@ -17,6 +17,29 @@
         <h3>{{ a_list.0 }}</h3>
         <h3>{{ a_dict.b }}</h3>
         <h3>{# this is a comment #}</h3>
+        
+        <ul>
+            {% for item in a_list %}
+                
+                {% if item == "dog" %}
+                    <li>{{ item }}</li>
+                {% else %}
+                    <li>{{ item }} it's not a dog</li>
+                {% endif %}
+            
+            {% endfor %}
+        </ul>    
+
+        {% if user_auth == True %}
+            <p>{{ "Welcome to our page" }}</p>
+        {% elif user_auth == False %}
+            <p>{{ "User must log in" }}</p>
+        {% else %}
+            <p>{{ "User error" }}</p>
+        {% endif %}
+
+
+
     </div>    
 
 </body>
