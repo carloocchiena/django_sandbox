@@ -9,3 +9,7 @@
 - migrate the main database: `python manage.py migrate`
 
 - migrate the app database: `python manage.py migrate my_app`
+
+- see SQL commands run by django: `python manage.py sqlmigrate first_app 0001`
+
+- run django shell: `python manage.py shell`
