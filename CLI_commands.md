@@ -12,7 +12,7 @@
 
 - start new django app: `python manage.py startapp my_app`
 
-- make the migration: `python manage.py makemigration`
+- make the migration: `python manage.py makemigration my_app`
 
 - migrate the main database: `python manage.py migrate`
 
@@ -24,6 +24,4 @@
 
 - import modules in the shell: `from first_app.models import MyModel`
 
-- example of queries: `MyModel.objects.all()`, `MyModel.objects.filter(name='my_name')`, `MyModel.objects.filter(age__gte=20).all()`, `MyModel.objects.filter(first_name__startswith="c").all()`
-
-
+- example of queries: `MyModel.objects.all()`, `MyModel.objects.filter(name='my_name')`, `MyModel.objects.filter(age__gte=20).all()`, `MyModel.objects.filter(first_name__startswith="c").all()`, `MyModel.objects.filter(first_name__startswith="c").exclude(age__gte=20).all()`, `MyModel.objects.order_by('age').all()`

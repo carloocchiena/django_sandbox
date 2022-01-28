@@ -2,6 +2,7 @@ from django.http.response import HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponse
+from . import models
 
 # /first_app/
 
@@ -18,6 +19,14 @@ articles = {
 # /
 def main_view(request):
     return render(request,'first_app/home_app.html')
+
+# /get_all
+def get_all(request):
+    
+    all_users = models.MyModel.objects.all()
+    context = {'users':all_users}
+    
+    return render(request, 'first_app/get_all.html', context=context)
 
 # /variables/
 def variables_view(request):

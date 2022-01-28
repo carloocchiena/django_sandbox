@@ -1,0 +1,15 @@
+{% extends 'base_template.html' %}
+{% load static %}
+
+{% block title %} <title>All Users</title> {% endblock %}
+
+    {% block content %}
+    <div class="container">
+        <h2>Here's all the user list</h2>
+        <ul>
+            {% for user in users %}
+                <li>{{ user }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
