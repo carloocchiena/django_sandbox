@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 class MyModel(models.Model):
-    objects = models.Manager()
+    objects = models.Manager() # this is needed to avoid VS Code error
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     age = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(120)])
