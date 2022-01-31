@@ -1,13 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from . import models
 
 # Create your views here.
 # /cars/
 
 def show(request):
-    return render(request, 'cars/html/show.html')
+    all_cars = models.Car.objects.all()
+    context = {'all_cars': all_cars}
+    
+    return render(request, 'cars/html/show.html', context=context)
 
 def add(request):
-    return render(request, 'cars/html/add.html')
+    if request.POST:
+        brand = request.POST["brand"]
+        year = int(request.POST["year"])
+        models.Car.objects.create(brand=brand, year=year)
+        return redirect(reverse('cars:show'))
+    else:
+        return render(request, 'cars/html/add.html')
 
 def delete(request):
-    return render(request, 'cars/html/delete.html')
+    if request.POST:
+        pk = request.POST["pk"]
+        try:
+            models.Car.objects.get(pk=pk).delete()
+            return redirect(reverse('cars:show'))
+        except:
+            print("pk not found")
+            return redirect(reverse('cars:show'))
+    else:
+        return render(request, 'cars/html/delete.html')
