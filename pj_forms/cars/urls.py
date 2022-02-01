@@ -6,6 +6,6 @@ app_name = 'cars'
 # /cars/
 
 urlpatterns = [
-    path('rental_review/', views.rental_review, name='rental_review'),
+    path('', views.rental_review, name='rental_review'),
     path('thank_you/', views.thank_you, name='thank_you'),
 ]
