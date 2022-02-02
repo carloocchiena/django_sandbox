@@ -10,7 +10,7 @@ from django.forms import ModelForm
 #     email = forms.EmailField(label='Email', required=True)
 #     review = forms.CharField(label='Review', widget=forms.Textarea(attrs={'class':'mybox'}), required=True)
     
-# this is the manual\standard way to create a model form
+# this is the way to create a model form with Django Classes
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
