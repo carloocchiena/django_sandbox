@@ -16,3 +16,17 @@ class ReviewForm(ModelForm):
         model = Review
         fields = "__all__"
         
+        # add here your custom labels for the forms
+        labels = {
+            'first_name': 'First name',
+            'last_name': 'Last name',
+        }
+        
+        # add here your custom error messages for the forms
+        error_messages = {
+            'stars': {
+                'min_value': 'Please enter a value greater than or equal to 1.',
+                'max_value': 'Please enter a value less than or equal to 5.'
+            }
+        }
+        
