@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List of Teachers</h1>
+    <ul>
+        {% for teacher in teachers_list %}
+            <li>
+                <h4>
+                    <a href="/classroom/teacher_detail/{{ teacher.id }}">{{ teacher.first_name | title }} {{ teacher.last_name | title }}, {{ teacher.subject | title }}</a>
+                </h4>
+                <a href="/classroom/teacher_update/{{ teacher.id }}">Update subject</a>
+                <a href="/classroom/teacher_delete/{{ teacher.id }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
