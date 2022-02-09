@@ -12,7 +12,7 @@
 
 - start new django app: `python manage.py startapp my_app`
 
-- make the migration: `python manage.py makemigration my_app`
+- make the migration: `python manage.py makemigrations my_app`
 
 - migrate the main database: `python manage.py migrate`
 
