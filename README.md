@@ -1,5 +1,7 @@
-# django sandbox wip
-Actually just a sandbox for a pj I am doing in Django. Update will follows. 
+# django sandbox
+Actually just a sandbox for testing some Django Templates, Model, Views and Forms.
+
+I'll be using for a deeper project I'll be starting soon. 
 
 <h4> DB Queries: https://docs.djangoproject.com/en/4.0/topics/db/queries/ </h4>
 <h4> Validators: https://docs.djangoproject.com/en/4.0/ref/validators/ </h4>
