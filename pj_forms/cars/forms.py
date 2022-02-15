@@ -1,7 +1,6 @@
 from django import forms
-from .models import Review
 from django.forms import ModelForm
-
+from .models import Review
 
 # this is the manual\standard way to create a form
 # class ReviewForm(forms.Form):
